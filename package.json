@@ -1,0 +1,40 @@
+{
+  "name": "cqqrz-website",
+  "version": "4.0.0",
+  "description": "Source for the CQQRZ website",
+  "watch": {
+    "build": {
+      "patterns": [
+        "src/**/*",
+        "template.html"
+      ],
+      "extensions": "*"
+    }
+  },
+  "scripts": {
+    "start": "concurrently -n build,http,browser \"npm-watch\" \"npm run http\" \"npm run open\"",
+    "http": "serve dist",
+    "open": "start http://localhost:3000",
+    "watch": "npm-watch",
+    "build": "node build.js",
+    "deploy": "node build.js && set CACHE_DIR=/tmp&& gh-pages -d dist -b master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cqqrz/cqqrz.github.io.git"
+  },
+  "author": "Claus Niesen",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/cqqrz/cqqrz.github.io/issues"
+  },
+  "homepage": "https://cqqrz.github.io/",
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "fs-extra": "^11.4.0",
+    "gh-pages": "^6.3.0",
+    "klaw": "^4.1.0",
+    "npm-watch": "^0.13.0",
+    "serve": "^14.2.6"
+  }
+}

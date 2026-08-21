@@ -1,0 +1,41 @@
+body {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+    max-width: 500px;
+    height: auto;
+}
+
+hr {
+   border: 0;
+   height: 1px;
+   background-image: linear-gradient(to right, rgba(153, 204, 255, 0), rgba(153, 204, 255, 1), rgba(153, 204, 255, 0));
+}
+
+#website-header {
+    text-align: center
+}
+
+#content-container {
+  margin:40px;
+}
+
+#website-footer {
+  display: flex; 
+  justify-content: space-around;
+}
+
+dl.bulleted-dl dt {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  font-weight: bold;
+}
+  
+dl.bulleted-dl dd {
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
